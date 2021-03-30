@@ -1,0 +1,52 @@
+.analog_stopwatch {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 40%);
+  z-index: -2;
+
+  &__second-hand, &__minute-hand {
+    position: absolute;
+    height: 50px;
+    width: 2px;
+    background-color: darkred;
+
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1px;
+    transform-origin: left bottom 0;
+  }
+
+  &__second-hand {
+    animation: second-hand-start 5s linear infinite;
+  }
+
+  &__minute-hand {
+    height: 40px;
+    width: 3px;
+    background-color: $dark-color;
+    z-index: -1;
+    animation: second-hand-start 60s linear infinite;
+  }
+
+  &__red-circle, &__black-circle {
+    width: 12px;
+    height: 12px;
+    background-color: $dark-color;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+  }
+
+  &__red-circle {
+    background-color: darkred;
+    width: 8px;
+    height: 8px;
+  }
+}

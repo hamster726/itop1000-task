@@ -1,0 +1,34 @@
+@import "base/variables";
+@import "base/animation";
+@import "libs/bootstrap-reboot.min";
+
+@import "blocks/stopwatch";
+@import "blocks/titles";
+@import "blocks/analog_stopwatch";
+@import "blocks/media";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+* {
+  color: $dark-color;
+}
+
+body {
+  background-color: #ddeefc;
+  position: relative;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100vh;
+  padding-top: 50px;
+}
